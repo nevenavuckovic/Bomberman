@@ -1,0 +1,55 @@
+﻿<Window x:Class="Bomberman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bomberman"
+        mc:Ignorable="d"
+        FontSize="20" Background="FloralWhite"
+        Icon="Resources\Pictures\bomberman.png"
+        Title="Bomberman" WindowState="Maximized" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="0.37*"></RowDefinition>
+            <RowDefinition Height="0.04*"></RowDefinition>
+            <RowDefinition Height="0.08*"></RowDefinition>
+            <RowDefinition Height="0.08*"></RowDefinition>
+            <RowDefinition Height="0.03*"></RowDefinition>
+            <RowDefinition Height="0.08*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+            <ColumnDefinition Width="0.05*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="3" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Bomberman</TextBlock>
+        <Image Grid.Column="5" Grid.Row="1" Source="Resources\Pictures\bomberman.png" ></Image>
+        <TextBlock Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="3" Text="Choose player's name"  HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <ComboBox x:Name="PlayersComboBox" Grid.Column="4" Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding PlayersName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button x:Name="AddNewPlayerButton" Grid.Column="5" Grid.Row="6" Content="Add new player" Click="AddNewPlayerButton_Click"></Button>
+        <Button x:Name="StartNewGameButton" Grid.Column="3" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="Start new game" Click="StartNewGameButton_Click"></Button>
+        <Button x:Name="HighScoresButton" Grid.Column="6" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="High scores" Click="HighScoresButton_Click"></Button>
+        <Button x:Name="HelpButton" Grid.Column="1" Grid.Row="9" FontSize="15" Content="Help" Click="HelpButton_Click"></Button>
+        <Button x:Name="ExitButton" Grid.Column="9" Grid.Row="9" FontSize="15" Content="Exit" Click="ExitButton_Click"></Button>
+
+    </Grid>
+</Window>

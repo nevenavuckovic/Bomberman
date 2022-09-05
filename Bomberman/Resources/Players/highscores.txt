@@ -1,0 +1,5 @@
+1. Nevena = 29490
+2. Nevena = 22290
+3. Nevena = 10510
+4. Bomberman = 10000
+5. Bomberman = 5000

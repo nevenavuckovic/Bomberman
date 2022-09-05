@@ -1,0 +1,36 @@
+﻿<Window x:Class="Bomberman.AddNewPlayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bomberman"
+        mc:Ignorable="d"
+        FontSize="25" Background="AntiqueWhite" 
+        Icon="Resources\Pictures\bomberman.png"
+        Title="Add new player" Height="300" Width="600" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
+    <Grid KeyDown="Grid_KeyDown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.13*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.14*"></RowDefinition>
+            <RowDefinition Height="0.13*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.15*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">Please enter your name:</TextBlock>
+        <TextBox x:Name="NewPlayerName" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" Focusable="True"></TextBox>
+
+        <Button x:Name="NewPlayerNameOKButton" Grid.Column="2" Grid.Row="5" Content="OK" Click="NewPlayerNameOKButton_Click"></Button>
+
+
+    </Grid>
+</Window>
